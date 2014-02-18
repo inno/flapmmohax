@@ -312,8 +312,11 @@
             return this.x > w + 200
         }
     };
-    document.body.onkeydown = document.body.ontouchstart = function (a) {
+    flap = function (a) {
         null != c && c.gameOver && 389 <= c.y ? K() : null != c && 0 < c.y && (C = !0)
+    };
+    document.body.onkeydown = document.body.ontouchstart = function (a) {
+        flap(a);
     };
     window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
         window.webkitRequestAnimationFrame || function (a) {

@@ -288,6 +288,8 @@
             }
         },
         collidesWith: function (a) {
+            if (god) return false;
+
             return this.isValid() ? O({
                 x: a.x,
                 y: a.y,
@@ -312,10 +314,15 @@
             return this.x > w + 200
         }
     };
+    god=false;
     flap = function (a) {
         null != c && c.gameOver && 389 <= c.y ? K() : null != c && 0 < c.y && (C = !0)
     };
     document.body.onkeydown = document.body.ontouchstart = function (a) {
+        // [G]od mode
+        if (a.keyCode == 71)
+            god = !god;
+
         flap(a);
     };
     window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame ||

@@ -315,13 +315,22 @@
         }
     };
     god=false;
+    autobird=0;
     flap = function (a) {
         null != c && c.gameOver && 389 <= c.y ? K() : null != c && 0 < c.y && (C = !0)
+    };
+    flapper = function (a) {
+        flap();
+        autobird = setTimeout(flapper, 500);
     };
     document.body.onkeydown = document.body.ontouchstart = function (a) {
         // [G]od mode
         if (a.keyCode == 71)
             god = !god;
+
+        // [A]utobird
+        if (a.keyCode == 65)
+            autobird = autobird ? clearTimeout(autobird) : setTimeout(flapper, 500);
 
         flap(a);
     };

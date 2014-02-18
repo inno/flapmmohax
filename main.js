@@ -9,8 +9,7 @@
         m = new WebSocket(n, "flapmmo.com");
         m.binaryType = "arraybuffer"; - 1 == window.location.href.indexOf("http://flapmmo.com/")
             && -1 == window.location.href.indexOf("162.243.44.70")
-            && -1 == window.location.href.indexOf("96.126.121.68")
-            && (window.location = "http://flapmmo.com/");
+            && -1 == window.location.href.indexOf("96.126.121.68");
         m.onopen = function (a) {
             h = [];
             null != c && (w = c.x);

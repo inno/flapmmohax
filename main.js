@@ -7,7 +7,10 @@
         n = v[~~(v.length * Math.random())];
         "/4chan" == window.location.pathname && (n = "ws://107.170.43.182:2830");
         m = new WebSocket(n, "flapmmo.com");
-        m.binaryType = "arraybuffer"; - 1 == window.location.href.indexOf("http://flapmmo.com/") && -1 == window.location.href.indexOf("162.243.44.70") && -1 == window.location.href.indexOf("96.126.121.68") && (window.location = "http://flapmmo.com/");
+        m.binaryType = "arraybuffer"; - 1 == window.location.href.indexOf("http://flapmmo.com/")
+            && -1 == window.location.href.indexOf("162.243.44.70")
+            && -1 == window.location.href.indexOf("96.126.121.68")
+            && (window.location = "http://flapmmo.com/");
         m.onopen = function (a) {
             h = [];
             null != c && (w = c.x);

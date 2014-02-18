@@ -82,8 +82,11 @@
         b.translate(-d, 0);
         for (a = 0; a < h.length; a++) h[a].drawOverlay();
         b.restore();
-        u ? b.fillText("Score: " + Q() + " | Players: " + E + " | Distance: " + (null == c ? 0 : Math.floor(c.x / 200)) + " | Server #" +
-            (v.indexOf(n) + 1), 20, 20) : b.fillText("Connecting to server " + n.slice(5) + "...", 20, 20);
+        u ? b.fillText("Score: " + Q() + " | Players: " + E + " | Distance: " + (null == c ? 0 : Math.floor(c.x / 200)) + " | Server #" + (v.indexOf(n) + 1)
+        + (god ? " | GODMODE" : "")
+        + (autobird ? " | AUTOBIRD" : "")
+        , 20, 20)
+        : b.fillText("Connecting to server " + n.slice(5) + "...", 20, 20);
         B.clearRect(0, 0, f.width, f.height);
         B.drawImage(t, 0, 0, f.width, f.height);
         window.requestAnimationFrame(H)
